@@ -5,6 +5,7 @@ import RecipesList from "./RecipesList";
 import RecipesNumber from "./RecipesNumber";
 import PaginationSelector from "./Pagination";
 import SkeletonLoading from "./SkeletonLoading";
+import { Typography } from "@mui/material";
 
 const Recipes = () => {
   const [recipes, setRecipes] = useState([]);
@@ -46,6 +47,9 @@ const Recipes = () => {
 
   return (
     <>
+      <Typography variant="h3" sx={{ marginBottom: 3 }} color="#081c15">
+        Recipes List
+      </Typography>
       <RecipesNumber
         recipesPerPage={recipesPerPage}
         handleChange={handleChange}

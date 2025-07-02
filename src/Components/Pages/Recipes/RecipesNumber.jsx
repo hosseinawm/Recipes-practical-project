@@ -3,12 +3,12 @@ const RecipesNumber = ({ recipesPerPage, handleChange }) => {
   return (
     <Box sx={{ width: 100, marginBottom: 3 }}>
       <FormControl fullWidth>
-        <InputLabel id="number-select">Sort</InputLabel>
+        <InputLabel id="sort">sort</InputLabel>
         <Select
-          labelId="number-select"
+          labelId="number"
           id="demo-simple-select"
           value={recipesPerPage}
-          label="recipesNumber"
+          label="sort"
           onChange={handleChange}
         >
           <MenuItem value={6}>6</MenuItem>

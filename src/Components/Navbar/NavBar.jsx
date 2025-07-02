@@ -10,6 +10,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import { styled, alpha } from "@mui/material/styles";
 import SearchIcon from "@mui/icons-material/Search";
+import { Link } from "react-router";
 
 function NavBar() {
   const Search = styled("div")(({ theme }) => ({
@@ -68,8 +69,15 @@ function NavBar() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Recipes.com
           </Typography>
-          <Button color="inherit">List</Button>
-          <Button color="inherit" sx={{ marginRight: "20px" }}>
+          <Button component={Link} to="/" color="inherit">
+            List
+          </Button>
+          <Button
+            component={Link}
+            to="/Favorite"
+            color="inherit"
+            sx={{ marginRight: "20px" }}
+          >
             Favorite
           </Button>
           <Search>
@@ -81,7 +89,9 @@ function NavBar() {
               inputProps={{ "aria-label": "search" }}
             />
           </Search>
-          <Button color="inherit">Login</Button>
+          <Button sx={{ ml: 2 }} component={Link} to="/Login" color="inherit">
+            Login/Register
+          </Button>
         </Toolbar>
       </AppBar>
     </Box>
